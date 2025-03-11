@@ -1,0 +1,508 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./SFProDisplay-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Text";
+  src: url("./SFProText-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("PPEditorialNew-Italic.woff2") format("woff2"), url("PPEditorialNew-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("PPEditorialNew-Regular.woff2") format("woff2"), url("PPEditorialNew-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 18px;
+  color: #1d1d1d;
+  cursor: none;
+  background-color: #F9F9F9;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body ul,
+body li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+body .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #1d1d1d;
+}
+
+a {
+  color: #1d1d1d;
+  text-decoration: none;
+}
+
+a:hover,
+a:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  -webkit-backdrop-filter: saturate(30);
+          backdrop-filter: saturate(30);
+  border-radius: 50%;
+  position: fixed;
+  margin-top: -140px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+}
+
+.link-grow {
+  transform: scale(2);
+  background: black;
+}
+
+.hovered-link {
+  color: #FFFFFF;
+}
+
+.header {
+  position: fixed;
+  top: 13px;
+  left: 2.1%;
+  width: 95.8%;
+  z-index: 5;
+}
+.header ul {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.header li {
+  padding: 3px 22px;
+}
+
+.main_page {
+  padding-bottom: 118px;
+}
+.main_page .main_page_title {
+  font-family: "PP Editorial New", serif;
+  padding-top: clamp(180px, 15vw, 270px);
+  font-size: clamp(120px, 10vw, 200px);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.main_page .main_page_caption {
+  font-family: "PP Editorial New", serif;
+  padding-top: 180px;
+  font-size: 18px;
+  text-align: center;
+  font-style: italic;
+}
+
+.work_section {
+  padding-top: 50px;
+  padding-bottom: 190px;
+  padding-left: 2.1%;
+  padding-right: 2.1%;
+}
+.work_section .work_intro {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.work_section .work_intro .work_intro_left {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  align-items: center;
+}
+.work_section .work_intro .work_intro_left .circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #1d1d1d;
+}
+.work_section .work_intro .work_intro_right {
+  width: 63.4vw;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+.work_section .work_intro .work_intro_right .padding {
+  display: inline-block;
+  width: 25%;
+}
+.work_section .work_list {
+  padding-top: 120px;
+  width: 31vw;
+  margin-left: auto;
+}
+.work_section .work_list li {
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  padding: 10px 0px;
+}
+.work_section .work_item {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4vw;
+  grid-row-gap: 130px;
+  margin-top: 80px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.work_section .work_item img {
+  width: 100%;
+}
+.work_section .work_item .work_01,
+.work_section .work_item .work_04 {
+  grid-column: span 2;
+}
+.work_section .work_item .work_02,
+.work_section .work_item .work_03,
+.work_section .work_item .work_05,
+.work_section .work_item .work_06 {
+  grid-column: span 1;
+}
+.work_section .work_item .work_des {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4vw;
+  width: 100%;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: clamp(36px, 5vw, 50px);
+  letter-spacing: -0.01em;
+}
+.work_section .work_item .work_des ul {
+  font-size: clamp(12px, 2vw, 14px);
+  line-height: clamp(15px, 3vw, 17px);
+  letter-spacing: -0.02em;
+  color: #666666;
+}
+
+.about_section {
+  padding-top: 50px;
+  padding-bottom: 200px;
+  padding-left: 2.1%;
+  padding-right: 2.1%;
+}
+.about_section .about_intro {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about_section .about_intro .about_intro_left {
+  display: flex;
+  gap: 8px;
+  font-size: 18px;
+  align-items: center;
+}
+.about_section .about_intro .about_intro_left .circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #1d1d1d;
+}
+.about_section .about_intro .about_intro_right {
+  width: 63.4vw;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+.about_section .about_intro .about_intro_right .padding {
+  display: inline-block;
+  width: 25%;
+}
+.about_section .about_cardlist {
+  padding-top: 140px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.4vw;
+}
+.about_section .about_cardlist img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* 이미지 비율 맞추기 */
+  z-index: -1;
+  /* 이미지가 배경으로 깔리도록 */
+}
+.about_section .about_cardlist .about_row_01,
+.about_section .about_cardlist .about_row_02,
+.about_section .about_cardlist .about_row_03,
+.about_section .about_cardlist .about_row_04 {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vw;
+}
+.about_section .about_cardlist .about_row_01 {
+  padding-top: 140px;
+}
+.about_section .about_cardlist .about_row_02 {
+  padding-top: 190px;
+}
+.about_section .about_cardlist .about_row_03 {
+  padding-top: 40px;
+}
+.about_section .about_cardlist .about_row_04 {
+  padding-top: 360px;
+}
+.about_section .about_cardlist [data-aos=custom-padding].aos-animate {
+  padding-top: 0 !important;
+}
+.about_section .about_cardlist .edu_card_title,
+.about_section .about_cardlist .work_card_title {
+  height: 180px;
+  background-color: #1d1d1d;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: clamp(36px, 5vw, 50px);
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  word-wrap: break-word;
+}
+.about_section .about_cardlist .edu_card_01,
+.about_section .about_cardlist .edu_card_02,
+.about_section .about_cardlist .edu_card_03,
+.about_section .about_cardlist .edu_card_04,
+.about_section .about_cardlist .edu_card_05,
+.about_section .about_cardlist .work_card_01,
+.about_section .about_cardlist .work_card_02,
+.about_section .about_cardlist .work_card_03,
+.about_section .about_cardlist .work_card_04 {
+  position: relative;
+  height: 360px;
+  border: 1px solid rgba(29, 29, 29, 0.5);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* 카드에 호버가 적용되었을 때 이미지 보이기 */
+  /* 텍스트 색상 변경 */
+}
+.about_section .about_cardlist .edu_card_01:hover img,
+.about_section .about_cardlist .edu_card_02:hover img,
+.about_section .about_cardlist .edu_card_03:hover img,
+.about_section .about_cardlist .edu_card_04:hover img,
+.about_section .about_cardlist .edu_card_05:hover img,
+.about_section .about_cardlist .work_card_01:hover img,
+.about_section .about_cardlist .work_card_02:hover img,
+.about_section .about_cardlist .work_card_03:hover img,
+.about_section .about_cardlist .work_card_04:hover img {
+  opacity: 1;
+}
+.about_section .about_cardlist .edu_card_01 img,
+.about_section .about_cardlist .edu_card_02 img,
+.about_section .about_cardlist .edu_card_03 img,
+.about_section .about_cardlist .edu_card_04 img,
+.about_section .about_cardlist .edu_card_05 img,
+.about_section .about_cardlist .work_card_01 img,
+.about_section .about_cardlist .work_card_02 img,
+.about_section .about_cardlist .work_card_03 img,
+.about_section .about_cardlist .work_card_04 img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 102%;
+  height: 102%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  object-fit: cover;
+  transform: translate(-1%, -1%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.about_section .about_cardlist .edu_card_01 .year,
+.about_section .about_cardlist .edu_card_02 .year,
+.about_section .about_cardlist .edu_card_03 .year,
+.about_section .about_cardlist .edu_card_04 .year,
+.about_section .about_cardlist .edu_card_05 .year,
+.about_section .about_cardlist .work_card_01 .year,
+.about_section .about_cardlist .work_card_02 .year,
+.about_section .about_cardlist .work_card_03 .year,
+.about_section .about_cardlist .work_card_04 .year {
+  flex: 1;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: clamp(36px, 5vw, 50px);
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  word-wrap: break-word;
+  color: #1d1d1d;
+  transition: color 0.2s ease;
+}
+.about_section .about_cardlist .edu_card_01:hover .year, .about_section .about_cardlist .edu_card_01:hover .card_des, .about_section .about_cardlist .edu_card_01:hover .card_des .info,
+.about_section .about_cardlist .edu_card_02:hover .year,
+.about_section .about_cardlist .edu_card_02:hover .card_des,
+.about_section .about_cardlist .edu_card_02:hover .card_des .info,
+.about_section .about_cardlist .edu_card_03:hover .year,
+.about_section .about_cardlist .edu_card_03:hover .card_des,
+.about_section .about_cardlist .edu_card_03:hover .card_des .info,
+.about_section .about_cardlist .edu_card_04:hover .year,
+.about_section .about_cardlist .edu_card_04:hover .card_des,
+.about_section .about_cardlist .edu_card_04:hover .card_des .info,
+.about_section .about_cardlist .edu_card_05:hover .year,
+.about_section .about_cardlist .edu_card_05:hover .card_des,
+.about_section .about_cardlist .edu_card_05:hover .card_des .info,
+.about_section .about_cardlist .work_card_01:hover .year,
+.about_section .about_cardlist .work_card_01:hover .card_des,
+.about_section .about_cardlist .work_card_01:hover .card_des .info,
+.about_section .about_cardlist .work_card_02:hover .year,
+.about_section .about_cardlist .work_card_02:hover .card_des,
+.about_section .about_cardlist .work_card_02:hover .card_des .info,
+.about_section .about_cardlist .work_card_03:hover .year,
+.about_section .about_cardlist .work_card_03:hover .card_des,
+.about_section .about_cardlist .work_card_03:hover .card_des .info,
+.about_section .about_cardlist .work_card_04:hover .year,
+.about_section .about_cardlist .work_card_04:hover .card_des,
+.about_section .about_cardlist .work_card_04:hover .card_des .info {
+  color: #fff;
+}
+.about_section .about_cardlist .edu_card_01 .card_des,
+.about_section .about_cardlist .edu_card_02 .card_des,
+.about_section .about_cardlist .edu_card_03 .card_des,
+.about_section .about_cardlist .edu_card_04 .card_des,
+.about_section .about_cardlist .edu_card_05 .card_des,
+.about_section .about_cardlist .work_card_01 .card_des,
+.about_section .about_cardlist .work_card_02 .card_des,
+.about_section .about_cardlist .work_card_03 .card_des,
+.about_section .about_cardlist .work_card_04 .card_des {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+.about_section .about_cardlist .edu_card_01 .card_des .info,
+.about_section .about_cardlist .edu_card_02 .card_des .info,
+.about_section .about_cardlist .edu_card_03 .card_des .info,
+.about_section .about_cardlist .edu_card_04 .card_des .info,
+.about_section .about_cardlist .edu_card_05 .card_des .info,
+.about_section .about_cardlist .work_card_01 .card_des .info,
+.about_section .about_cardlist .work_card_02 .card_des .info,
+.about_section .about_cardlist .work_card_03 .card_des .info,
+.about_section .about_cardlist .work_card_04 .card_des .info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.about_section .about_cardlist .edu_card_01 .card_des .info .state,
+.about_section .about_cardlist .edu_card_02 .card_des .info .state,
+.about_section .about_cardlist .edu_card_03 .card_des .info .state,
+.about_section .about_cardlist .edu_card_04 .card_des .info .state,
+.about_section .about_cardlist .edu_card_05 .card_des .info .state,
+.about_section .about_cardlist .work_card_01 .card_des .info .state,
+.about_section .about_cardlist .work_card_02 .card_des .info .state,
+.about_section .about_cardlist .work_card_03 .card_des .info .state,
+.about_section .about_cardlist .work_card_04 .card_des .info .state {
+  font-size: 14px;
+  color: rgba(29, 29, 29, 0.5);
+  transition: color 0.2s ease;
+}
+.about_section .about_cardlist .edu_card_01:hover .card_des .state,
+.about_section .about_cardlist .edu_card_02:hover .card_des .state,
+.about_section .about_cardlist .edu_card_03:hover .card_des .state,
+.about_section .about_cardlist .edu_card_04:hover .card_des .state,
+.about_section .about_cardlist .edu_card_05:hover .card_des .state,
+.about_section .about_cardlist .work_card_01:hover .card_des .state,
+.about_section .about_cardlist .work_card_02:hover .card_des .state,
+.about_section .about_cardlist .work_card_03:hover .card_des .state,
+.about_section .about_cardlist .work_card_04:hover .card_des .state {
+  color: rgba(255, 255, 255, 0.5);
+}
+.about_section .about_skills {
+  padding-top: 100px;
+  display: flex;
+  gap: 1.4vw;
+}
+.about_section .about_skills .tools_title,
+.about_section .about_skills .skills_title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(29, 29, 29, 0.5);
+  width: 47.2vw;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  padding: 8px 0px;
+}
+.about_section .about_skills .tools {
+  padding-top: 40px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.about_section .about_skills .skills {
+  padding-top: 40px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.about_section .about_skills .skills li {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: #1d1d1d 1px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.footer {
+  background-color: #1d1d1d;
+  color: #FFFFFF;
+  padding-top: 40px;
+  padding-bottom: 140px;
+}
+.footer .contact_items {
+  width: 31vw;
+  margin: 0 auto;
+}
+.footer .contact_items .contact_title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  padding: 8px 0px;
+}
+.footer .contact_items .contact_title img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg);
+}
+.footer .contact_items .contact {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.footer .contact_items .contact_icons {
+  padding-top: 40px;
+}/*# sourceMappingURL=PF.css.map */
